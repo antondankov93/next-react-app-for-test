@@ -1,0 +1,28 @@
+@import '../styles/colors';
+@import '../styles/mixins';
+
+.headerWrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: $linear_grey;
+  height: 50px;
+  margin: -8px;
+
+  a{
+    transition: 0.3s;
+    text-decoration: none;
+    @include standart_font($base_white, 20px);
+    &:hover{
+      transition: 0.3s;
+      color: grey;
+    }
+  }
+}
+
+.mainWrapper{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

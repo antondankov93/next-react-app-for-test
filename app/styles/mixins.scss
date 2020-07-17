@@ -1,0 +1,9 @@
+@import './colors';
+
+@mixin standart_font ($color, $size){
+  color: $color;
+  font-family: sans-serif;
+  font-size: $size;
+}
+
+

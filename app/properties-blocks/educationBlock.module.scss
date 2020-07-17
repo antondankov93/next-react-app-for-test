@@ -1,0 +1,98 @@
+@import '../styles/mixins';
+@import '../styles/colors';
+
+
+.headerWrapper {
+    width: 350px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    right: 152px;
+}
+
+.round {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 20px;
+    height: 20px;
+    border: 2px solid grey;
+    border-radius: 50%;
+    margin-left: 20px;
+
+    &:hover {
+        cursor: pointer;
+        transition: 0.3s;
+        border: 2px solid lightgrey;
+    }
+
+    &:active {
+        border: 2px solid darkgrey;
+    }
+}
+
+
+.listWrapper {
+
+    h3 {
+        @include standart_font($base_black, 15px);
+        font-weight: bold;
+    }
+
+    .properties {
+        position: relative;
+        right: 570px;
+        top: -16px;
+        text-align: end;
+    }
+
+    li {
+        list-style: none;
+        @include standart_font($base_black, 15px);
+        width: 500px;
+    }
+
+    .propertyList {
+        &.hide {
+            display: none;
+        }
+
+        margin: -10px 0 0 0;
+        padding: 0;
+        line-height: 1;
+        list-style: none;
+        position: relative;
+        left: 185px;
+
+        li {
+            height: 15px;
+        }
+    }
+
+    > li:not(:only-child),
+    li li {
+        position: relative;
+        padding: 25px 0 0 25px;
+    }
+
+    li:not(:last-child) {
+        border-left: 1px solid #ccc;
+    }
+
+    li li:before,
+    > li:not(:only-child):before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1.1em;
+        height: 2em;
+        border-bottom: 1px solid #ccc;
+    }
+
+    li:last-child:before {
+        border-left: 1px solid #ccc;
+
+    }
+}
